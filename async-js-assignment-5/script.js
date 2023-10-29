@@ -20,10 +20,11 @@ const renderproduct = function (data) {
 
 const renderError = function (msg) {
   productsContainer.insertAdjacentText("beforeend", msg);
+  productsContainer.style.opacity = 1;
 };
 
 const getproductData = function () {
-  fetch(`https://fakestoreapi.com/products/`)
+  fetch(`https://fakestoreapi.com/products/s`)
     .then((response) => {
       console.log(response);
       if (!response.ok)
